@@ -20,10 +20,12 @@ public static void main(String args[])
          Page page = browser.newPage();
          page.navigate("https://global.flixbus.com/");
          System.out.println(page.title());
+         
+         
          //page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("myscreenshot.png")));
-       // byte[] arr= page.screenshot(new Page.ScreenshotOptions().setFullPage(true).setPath(Paths.get("myscreenshot.png")));
+        byte[] arr= page.screenshot(new Page.ScreenshotOptions().setFullPage(true).setPath(Paths.get("myscreenshot.png")));
 
-         page.locator("//p[text()='Discover Germany with FlixTrain']").screenshot(new Locator.ScreenshotOptions().setPath(Paths.get("MyelementScreenshot.png")));
+         //page.locator("//p[text()='Discover Germany with FlixTrain']").screenshot(new Locator.ScreenshotOptions().setPath(Paths.get("MyelementScreenshot.png")));
 	     page.close();
 	 } 
 }
